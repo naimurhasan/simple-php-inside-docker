@@ -83,6 +83,7 @@
 
 - docker build from Dockerfile
 > docker build -t hello-world .
+> docker build -t flaskapp -f Dockerfile .
 
 
 - docker remove all containers
