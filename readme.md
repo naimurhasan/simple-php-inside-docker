@@ -84,3 +84,9 @@
 - docker build from Dockerfile
 > docker build -t hello-world .
 
+
+- docker remove all containers
+> docker container prune
+> docker rm `docker ps --no-trunc -aq`
+> FOR /f "tokens=*" %i IN ('docker ps -a -q') DO docker rm %i
+> docker rm @(docker ps -aq)
