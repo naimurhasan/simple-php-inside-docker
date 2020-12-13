@@ -1,38 +1,38 @@
-# Run a container
+- Run a container
 > docker run docker/whalesay cowsay boo
 
-# List Of Running Containers
+- List Of Running Containers
 > docker ps
 > docker ps -a
 
-# stop container
+- stop container
 > docker stop container_name
 
-# Remove Container
+- Remove Container
 > docker rm <heuristic_visvesvaraya>(Container Name)
 
-# List of Downloaded Images
+- List of Downloaded Images
 > docker images
 
-# Remove Docker
+- Remove Docker
 > docker rmi docker/whalesay
 
 
-# Pull if not exist and run
+- Pull if not exist and run
 > docker run nginx
 
-# only pull don't run
+- only pull don't run
 > docker pull nginx
 
-# append command and run container
+- append command and run container
 > docker run ubuntu sleep 5
 
-# execute command in running conainer
+- execute command in running conainer
 > docker ps
 > docker exec heuristic_visvesvaraya cat /etc/hosts
 
 
-# run attach and detach
+- run attach and detach
 - Run in attached mode in console
 > docker run kodekloud/simple-webapp
 - Run in detached (background) mode
@@ -41,11 +41,11 @@
 > docker attach a043d
 
 
-# docker tags (version)
+- docker tags (version)
 > docker run redis:latest
 > docker run redis:4.0
 
-# docker interactive mode for input
+- docker interactive mode for input
 > docker run -i kodekcloud/simple-prompt-docker
 - INPUT: NAIMUR
 - OUTPUT: Welcome Naimur!
@@ -55,32 +55,32 @@
 - OUTPUT: Welcome Naimur!
 
 
-# PORT MAPPING
+- PORT MAPPING
 > docker run -p 80:5000 kodekcloud simple-webapp
 - Explaination
 - Docker Host Internal IP: 127.17.0.2:5000
 - Browser Accesss Trhough 192.168.1.5:80
 
-# Volumne Mapping
+- Volumne Mapping
 > docker run -v /opt/datadir:/var/lib/mysql mysql
 
 
-# inspect container
+- inspect container
 > docker inspect blissful_container
-# logs container
+- logs container
 > docker inspect logs
 
 
-# docker env variable
+- docker env variable
 > docker run -e APP_COLOR=blue simple-color
 - inside python flask
 - color = os.environ.get('APP_COLOR')
 
-# docker --links
+- docker --links
 >docker run -d --name=redis redis
 >docker run -d --name=vote -p 5000:90 --link redis:redis voting-app
 
 
-# docker build from Dockerfile
+- docker build from Dockerfile
 > docker build -t hello-world .
 
